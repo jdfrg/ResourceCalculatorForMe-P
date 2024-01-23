@@ -1,1 +1,47 @@
+---
+authors:
+  JDFRG: "https://github.com/jdfrg"
 
+index_page_display_name: "Terraria"
+
+game_version: 1.4.4
+
+banner_message: "Terraria"
+
+recipe_types:
+  Crafting: "Craft {IN_ITEMS} into {OUT_ITEM}"
+  Smelting: "Use a furnace to smelt {IN_ITEMS} into {OUT_ITEM} using {ITEM Fuel}"
+
+requirement_groups:
+  Any Acacia Log:
+  - Acacia Log
+  - Acacia Wood
+  - Stripped Acacia Log
+  - Stripped Acacia Wood
+
+
+stack_sizes:
+  Shulker Box:
+    quantity_multiplier: 27 # 9x3 Stacks
+    plural: "Shulker Boxes"
+    extends_from: "Stack"
+
+  Stack:
+    quantity_multiplier: 64
+    plural: "Stacks"
+    extends_from: null
+
+default_stack_size: "Stack"
+
+resources:
+  Polished Granite:
+    recipes:
+    - output: 4
+      recipe_type: Crafting
+      requirements:
+        Granite: -4
+    - output: 1
+      recipe_type: Cutting
+      requirements:
+        Granite: -1
+    - recipe_type: Raw Resource
