@@ -10,8 +10,9 @@ banner_message: "Terraria"
 
 recipe_types:
   PHAnvil: "Craft {IN_ITEMS} into {OUT_ITEM} in an Iron or a Lead Anvil"
-  Transmute: "Transmute {IN_ITEMS} into {OUT_ITEM} by throwing it into Shimmer"
+  Transmutation: "Transmute {IN_ITEMS} into {OUT_ITEM} by throwing it into Shimmer"
   Crafting: "Craft {IN_ITEMS} into {OUT_ITEM} in a Work Bench"
+  Conversion: "Convert {IN_ITEMS} into {OUT_ITEMS} using a Chlorophyte Extractinator"
 
 requirement_groups:
   Any Wood:
@@ -34,34 +35,129 @@ resources:
         Iron Bar: -10
         Any Wood: -3
     - recipe_type: Raw Resource
+    
   Dirt:
     recipes:
-    - output: 1
     - recipe_type: Raw Resource
-    - recipe_type: Transmute
+    - output: 1
+      recipe_type: Transmutation
       requierements:
         Wood: -1
-    - recipe_type: Crafting
+    - output: 1
+      recipe_type: Crafting
       requierements:
         Dirt Wall: -4
-    - recipe_type: Crafting
+    - output: 1
+      recipe_type: Crafting
       requierements:
         Rocky Dirt Wall: -4
-    - recipe_type: Crafting
+    - output: 1
+      recipe_type: Crafting
       requierements:
         Cave Dirt Wall: -4
-    - recipe_type: Crafting
+    - output: 1
+      recipe_type: Crafting
       requierements:
         Rough Dirt Wall: -4
-    - recipe_type: Crafting
+    - output: 1
+      recipe_type: Crafting
       requierements:
         Layered Dirt Wall: -4
-    - recipe_type: Crafting
+    - output: 1
+      recipe_type: Crafting
       requierements:
         Crumbling Dirt Wall: -4
-    - recipe_type: Crafting
+    - output: 1
+      recipe_type: Crafting
       requierements:
         Cracked Dirt Wall: -4
-    - recipe_type: Crafting
+    - output: 1
+      recipe_type: Crafting
       requierements:
         Wavy Dirt Wall: -4
+        
+  Stone Block:
+    recipes:
+    - recipe_type: Raw Resource
+    - output: 1
+      recipe_type: Conversion
+      requiremenets:
+        Ebonstone Block: -1
+    - output: 1
+      recipe_type: Conversion
+      requiremenets:
+        Crimstone Block: -1
+    - output: 1
+      recipe_type: Conversion
+      requiremenets:
+        Pearlstone Block: -1
+    - output: 1
+      recipe_type: Transmutation
+      requiremenets:
+        Amethyst: -1
+    - output: 1
+      recipe_type: Transmutation
+      requiremenets:
+        Copper Ore: -1
+    - output: 1
+      recipe_type: Crafting
+      requiremenets:
+        Stone Wall: -4
+    - output: 1
+      recipe_type: Crafting
+      requiremenets:
+        Old Stone Wall: -4
+    - output: 1
+      recipe_type: Crafting
+      requiremenets:
+        Craggy Stone Wall: -4
+    - output: 1
+      recipe_type: Crafting
+      requiremenets:
+        Worn Stone Wall: -4
+    - output: 1
+      recipe_type: Crafting
+      requiremenets:
+        Stalactite Stone Wall: -4
+    - output: 1
+      recipe_type: Crafting
+      requiremenets:
+        Mottled Stone Wall: -4
+    - output: 1
+      recipe_type: Crafting
+      requiremenets:
+        Fractured Stone Wall: -4
+
+  Iron Broadsword:
+    recipes:
+    - recipe_type: PHAnvil
+      requierements:
+        Iron Bar: -8
+    - recipe_type: Raw Resource
+
+  Mushroom:
+    recipes:
+    - recipe_type: Raw Resource
+
+  Iron Shortsword:
+    recipes:
+    - recipe_type: PHAnvil
+      requierements:
+        Iron Bar: -6
+    - recipe_type: Raw Resource
+
+  Iron Hammer:
+    recipes:
+    - recipe_type: PHAnvil
+      requierements:
+        Iron Bar: -8
+        Any Wood: -3
+    - recipe_type: Raw Resource
+
+  Torch:
+    recipes:
+    - recipe_type: Crafting
+      requierements:
+        Gel: -1
+        Any Wood: -1
+    - recipe_type: Raw Resource
