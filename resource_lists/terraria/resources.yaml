@@ -9,39 +9,59 @@ game_version: 1.4.4
 banner_message: "Terraria"
 
 recipe_types:
-  Crafting: "Craft {IN_ITEMS} into {OUT_ITEM}"
-  Smelting: "Use a furnace to smelt {IN_ITEMS} into {OUT_ITEM} using {ITEM Fuel}"
+  PHAnvil: "Craft {IN_ITEMS} into {OUT_ITEM} in an Iron or a Lead Anvil"
+  Transmute: "Transmute {IN_ITEMS} into {OUT_ITEM} by throwing it into Shimmer"
+  Crafting: "Craft {IN_ITEMS} into {OUT_ITEM} in a Work Bench"
 
 requirement_groups:
-  Any Acacia Log:
-  - Acacia Log
-  - Acacia Wood
-  - Stripped Acacia Log
-  - Stripped Acacia Wood
-
-
-stack_sizes:
-  Shulker Box:
-    quantity_multiplier: 27 # 9x3 Stacks
-    plural: "Shulker Boxes"
-    extends_from: "Stack"
-
-  Stack:
-    quantity_multiplier: 64
-    plural: "Stacks"
-    extends_from: null
-
-default_stack_size: "Stack"
+  Any Wood:
+  - Wood
+  - Ebonwood
+  - Rich Mahagony
+  - Pearlwood
+  - Shadewood
+  - Spooky Wood
+  - Palm Wood
+  - Boreal Wood
+  - Ash Wood
 
 resources:
-  Polished Granite:
+  Iron Pickaxe:
     recipes:
-    - output: 4
-      recipe_type: Crafting
-      requirements:
-        Granite: -4
     - output: 1
-      recipe_type: Cutting
+      recipe_type: PHAnvil
       requirements:
-        Granite: -1
+        Iron Bar: -10
+        Any Wood: -3
     - recipe_type: Raw Resource
+  Dirt:
+    recipes:
+    - output: 1
+    - recipe_type: Raw Resource
+    - recipe_type: Transmute
+      requierements:
+        Wood: -1
+    - recipe_type: Crafting
+      requierements:
+        Dirt Wall: -4
+    - recipe_type: Crafting
+      requierements:
+        Rocky Dirt Wall: -4
+    - recipe_type: Crafting
+      requierements:
+        Cave Dirt Wall: -4
+    - recipe_type: Crafting
+      requierements:
+        Rough Dirt Wall: -4
+    - recipe_type: Crafting
+      requierements:
+        Layered Dirt Wall: -4
+    - recipe_type: Crafting
+      requierements:
+        Crumbling Dirt Wall: -4
+    - recipe_type: Crafting
+      requierements:
+        Cracked Dirt Wall: -4
+    - recipe_type: Crafting
+      requierements:
+        Wavy Dirt Wall: -4
